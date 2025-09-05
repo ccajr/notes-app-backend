@@ -43,3 +43,19 @@ A simple RESTful API built with Spring Boot that allows users to create, retriev
 | GET    | `/notes/{id}`   | Retrieve note by ID      |
 | PUT    | `/notes/{id}`   | Update note by ID        |
 | DELETE | `/notes/{id}`   | Delete note by ID        |
+
+## 📥 Request Format (POST & PUT only)
+   ```json
+   {
+     "title": "Sample Note",
+     "body": "This is a sample note body."
+   }
+   ```
+## 📤 Response Format
+   ```json
+   {
+     "id": 1,
+     "title": "Sample Note",
+     "body": "This is a sample note body."
+   }
+   ```

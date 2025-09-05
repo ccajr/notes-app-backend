@@ -1,18 +1,21 @@
 package com.ccajr.note.service;
 
 import java.util.List;
+import com.ccajr.note.dto.NoteRequestDto;
+import com.ccajr.note.dto.NoteResponseDto;
 
-import com.ccajr.note.model.Note;
-
+/**
+ * Service interface for note-related operations.
+ */
 public interface NoteService {
 
-    public List<Note> getAllNotes();
+    public List<NoteResponseDto> getAllNotes();
 
-    public Note getNoteById(Long id);
+    public NoteResponseDto getNoteById(Long id);
 
-    public Note createNote(Note note);
+    public NoteResponseDto createNote(NoteRequestDto note);
 
-    public Note updateNote(Long id, Note updatedNote);
+    public NoteResponseDto updateNote(Long id, NoteRequestDto updatedNote);
 
     public void deleteNote(Long id);
 }
